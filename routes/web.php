@@ -1,18 +1,24 @@
 <?php
 
+use App\Http\Controllers\APIController;
+use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\Admin\AdminDashboard;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+// ADMIN AUTH
+Route::get('/admin/login', [AuthController::class, 'index'])->name('login');
+Route::post('/admin/login', [AuthController::class, 'login']);
+Route::get('/admin/logout', [AuthController::class, 'logout']);
+
+// ADMIN PAGE
+Route::group(['prefix'=> 'admin','middleware'=>['auth']], function(){
+    Route::get('/', [AdminDashboard::class, 'index']);
+    Route::get('/agenda', [AdminAgenda::class, 'index']);
+    
+    Route::post('/agenda', [AdminAgenda::class, 'postHandler']);
 });
