@@ -6,8 +6,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
     <title>{{$title}}</title>
     <!-- Custom CSS -->
-    <link href="/assets/libs/flot/css/float-chart.css" rel="stylesheet">
-    <link href="/dist/css/style.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="/assets/libs/flot/css/float-chart.css">
+    <link rel="stylesheet" href="/assets/libs/sweetalert2/sweetalert2.min.css">
+    <link rel="stylesheet" href="/dist/css/style.min.css">
+    <!-- Custom JS -->
+    <script src="/assets/libs/sweetalert2/sweetalert2.all.min.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>

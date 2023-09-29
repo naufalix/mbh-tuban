@@ -3,7 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Post;
 use App\Models\User;
+use File;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -20,5 +22,15 @@ class DatabaseSeeder extends Seeder
             "username" => "naufal",  
             "password" => bcrypt('admin')
         ]);
+
+        $posts = json_decode(File::get("database/data/posts.json"));
+        foreach ($posts as $key => $value) {
+            Post::create([
+                "title" => $value->title,
+                "slug" => $value->slug,
+                "body" => $value->body,
+                "image" => $value->image,
+            ]);
+        }
     }
 }
