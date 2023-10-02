@@ -47,7 +47,7 @@ class AdminPost extends Controller
                 'title'=>'required',
                 'slug'=>'required',
                 'body'=>'required',
-                'image' => 'image|file|max:512',
+                'image' => 'image|file|max:1024',
             ]);
 
             // Upload new image
@@ -75,50 +75,49 @@ class AdminPost extends Controller
     public function update(Request $request){
         $validatedData = $request->validate([
             'id'=>'required|numeric',
-            'name'=>'required',
-            'province_id'=>'required|numeric',
-            'cities'=>'required',
+            'title'=>'required',
             'slug'=>'required',
-            'show'=>'required',
-            'sort'=>'required',
+            'body'=>'required',
         ]);
         
-        $region = Region::find($request->id);
+        $post = Post::find($request->id);
 
-        //Check if the region is found
-        if($region){
+        //Check if the post is found
+        if($post){
             
             // Check if the slug is different from before
-            if($region->slug!=$request->slug){
+            if($post->slug!=$request->slug){
                 
                 // Check if the slug has not been used
-                if(!Region::whereSlug($request->slug)->first()){
+                if(!Post::whereSlug($request->slug)->first()){
 
                     //Check if has image
                     if($request->file('image')){
                             
                         $validatedData = $request->validate([
                             'id'=>'required|numeric',
-                            'name'=>'required',
-                            'province_id'=>'required|numeric',
-                            'cities'=>'required',
+                            'title'=>'required',
                             'slug'=>'required',
-                            'show'=>'required',
-                            'sort'=>'required',
-                            'image' => 'mimes:webp|file|max:512',
+                            'body'=>'required',
+                            'image' => 'image|file|max:1024',
                         ]);
 
-                        // Replace new image
-                        $validatedData['image'] = $request->slug.".webp";
-                        $request->file('image')->move(public_path('assets/img/region'), $validatedData['image']);
+
+                        // Delete old image
+                        $image_path = public_path().'/assets/images/post/'.$post->image;
+                        unlink($image_path);
                         
-                        $region->update($validatedData);
-                        return ['status'=>'success','message'=>'Region berhasil diupdate'];
+                        // Upload new image
+                        $validatedData['image'] = time().".png";
+                        $request->file('image')->move(public_path('assets/images/post'), $validatedData['image']);
+                        
+                        $post->update($validatedData);
+                        return ['status'=>'success','message'=>'Post berhasil diupdate'];
                         
                     }else{
                         // Update data
-                        $region->update($validatedData);    
-                        return ['status'=>'success','message'=>'Region berhasil diedit'];
+                        $post->update($validatedData);    
+                        return ['status'=>'success','message'=>'Post berhasil diedit'];
                     }
                 }else{
                     return ['status'=>'error','message'=>'Slug telah terpakai'];
@@ -130,26 +129,27 @@ class AdminPost extends Controller
                             
                     $validatedData = $request->validate([
                         'id'=>'required|numeric',
-                        'name'=>'required',
-                        'province_id'=>'required|numeric',
-                        'cities'=>'required',
+                        'title'=>'required',
                         'slug'=>'required',
-                        'show'=>'required',
-                        'sort'=>'required',
-                        'image' => 'mimes:webp|file|max:512',
+                        'body'=>'required',
+                        'image' => 'image|file|max:1024',
                     ]);
 
-                    // Replace new image
-                    $validatedData['image'] = $request->slug.".webp";
-                    $request->file('image')->move(public_path('assets/img/region'), $validatedData['image']);
+                    // Delete old image
+                    $image_path = public_path().'/assets/images/post/'.$post->image;
+                    unlink($image_path);
                     
-                    $region->update($validatedData);
-                    return ['status'=>'success','message'=>'Region berhasil diupdate'];
+                    // Upload new image
+                    $validatedData['image'] = time().".png";
+                    $request->file('image')->move(public_path('assets/images/post'), $validatedData['image']);
+                    
+                    $post->update($validatedData);
+                    return ['status'=>'success','message'=>'Postingan berhasil diupdate'];
                     
                 }else{
                     // Update data
-                    $region->update($validatedData);    
-                    return ['status'=>'success','message'=>'Region berhasil diedit'];
+                    $post->update($validatedData);    
+                    return ['status'=>'success','message'=>'Postingan berhasil diedit'];
                 }
             }
         }else{
@@ -163,16 +163,16 @@ class AdminPost extends Controller
             'id'=>'required|numeric',
         ]);
 
-        $region = Region::find($request->id);
+        $post = Post::find($request->id);
 
-        //Check if the region is found
-        if($region){
-            $image_path = public_path().'/assets/img/region/'.$region->slug.'.webp';
+        //Check if the post is found
+        if($post){
+            $image_path = public_path().'/assets/images/post/'.$post->image;
             unlink($image_path);
-            Region::destroy($request->id);
-            return ['status'=>'success','message'=>'Region berhasil dihapus'];
+            Post::destroy($request->id);
+            return ['status'=>'success','message'=>'Postingan berhasil dihapus'];
         }else{
-            return ['status'=>'error','message'=>'Region tidak ditemukan'];
+            return ['status'=>'error','message'=>'Postingan tidak ditemukan'];
         }
     }
 }

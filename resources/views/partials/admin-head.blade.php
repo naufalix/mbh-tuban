@@ -19,5 +19,6 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
-        .rounded {border-radius: 4px!important;}
+        .rounded {border-radius: 4px;}
+        .btn-icon {border-radius: 4px; padding: 0.25rem 0.5rem; font-size: 0.76563rem; width: 27px; height: 27px;}
     </style>
