@@ -51,15 +51,14 @@ class AdminFacility extends Controller
             
         }else{
             return ['status'=>'error','message'=>'Gambar tidak boleh kosong'];
-        }
-
-        
+        }  
     }
 
     public function update(Request $request){
         $validatedData = $request->validate([
             'id'=>'required|numeric',
             'name'=>'required',
+            'image' => 'image|file|max:1024',
         ]);
         
         $facility = Facility::find($request->id);
@@ -70,12 +69,6 @@ class AdminFacility extends Controller
                 //Check if has image
                 if($request->file('image')){
                         
-                    $validatedData = $request->validate([
-                        'id'=>'required|numeric',
-                        'name'=>'required',
-                        'image' => 'image|file|max:1024',
-                    ]);
-
                     // Delete old image
                     $image_path = public_path().'/assets/images/facility/'.$facility->image;
                     unlink($image_path);
