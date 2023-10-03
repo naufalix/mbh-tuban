@@ -15,6 +15,11 @@
           </a>
         </li>
         <li class="sidebar-item">
+          <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/gallery" aria-expanded="false">
+            <i class="fas fa-image"></i><span class="hide-menu">Galeri</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
           <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/post" aria-expanded="false">
             <i class="fas fa-pencil-alt"></i><span class="hide-menu">Postingan</span>
           </a>
