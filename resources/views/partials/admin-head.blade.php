@@ -8,6 +8,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css">
     <link rel="stylesheet" href="/assets/libs/flot/css/float-chart.css">
+    <link rel="stylesheet" href="/assets/libs/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="/assets/libs/sweetalert2/sweetalert2.min.css">
     <link rel="stylesheet" href="/dist/css/style.min.css">
     <!-- Custom JS -->
