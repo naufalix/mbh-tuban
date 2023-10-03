@@ -8,16 +8,16 @@
       <!-- ============================================================== -->
       <a class="navbar-brand" href="index.html">
         <!-- Logo icon -->
-        <b class="logo-icon p-l-10">
+        <b class="logo-icon ">
           <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
           <!-- Dark Logo icon -->
-          <img src="/assets/images/logo.jpg" alt="homepage" class="light-logo" style="width:100%"/>
+          <img src="/assets/images/logo-white.png" alt="homepage" class="light-logo" style="width:100%"/>
         </b>
         <!--End Logo icon -->
         <!-- Logo text -->
         <span class="logo-text d-none">
           <!-- dark Logo text -->
-          <img src="/assets/images/logo.jpg" alt="homepage" class="light-logo"/>
+          <img src="/assets/images/logo-white.png" alt="homepage" class="light-logo"/>
         </span>
         <!-- Logo icon -->
         <!-- <b class="logo-icon"> -->
