@@ -44,7 +44,7 @@
             <i class="mdi mdi-account-group" style="font-size: 20px;"></i><span class="hide-menu">Struktur organisasi</span>
           </a>
         </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item d-none">
           <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
             <i class="mdi mdi-chevron-down"></i><span class="hide-menu">Dropdpwn </span>
           </a>

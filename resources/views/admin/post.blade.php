@@ -91,7 +91,7 @@
           <div class="row mb-2">
             <div class="col-12">
               <label class="required fw-bold mb-2">Isi postingan</label>
-              <textarea class="form-control" id="body" name="body" rows="8" required></textarea>
+              <textarea class="form-control" id="body" name="body" rows="10" required></textarea>
             </div>
           </div>
         </div>
@@ -137,7 +137,7 @@
           <div class="row mb-2">
             <div class="col-12">
               <label class="required fw-bold mb-2">Isi postingan</label>
-              <textarea class="form-control" id="ebd" name="body" rows="8" required></textarea>
+              <textarea class="form-control" id="ebd" name="body" rows="10" required></textarea>
             </div>
           </div>
         </div>
