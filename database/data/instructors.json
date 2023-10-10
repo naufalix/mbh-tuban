@@ -1,0 +1,20 @@
+[
+  {"name": "KH. Fathul Huda", "gender": "M", "level": 1, "position": "Mudir of Islamic Boarding"},
+  {"name": "Drs. H. Mohamad Rowi, M. Si", "gender": "M", "level": 2, "position": "The Foundation's President"},
+  {"name": "Hasan Ma’sum , Lc", "gender": "M", "level": 3, "position": "Head of Boarding"},
+  {"name": "Mariana Ulfarida S.S", "gender": "F", "level": 3, "position": "Head of Boarding"},
+  {"name": "Haqiqi Elrozaq S.Psi", "gender": "M", "level": 4, "position": "Musyrifah"},
+  {"name": "Choirul Huda", "gender": "M", "level": 5, "position": "Diniyah"},
+  {"name": "Novi Zulayani S.Pd", "gender": "F", "level": 4, "position": "Musyrifah"},
+  {"name": "Azizah Nurul Aini S.Pd.I.", "gender": "F", "level": 4, "position": "Musyrifah"},
+  {"name": "Nina Oktaviasari S.Pd", "gender": "F", "level": 4, "position": "Musyrifah"},
+  {"name": "Uswatun Hasanah S.Pd", "gender": "F", "level": 4, "position": "Musyrifah"},
+  {"name": "Ana Fauziah S.Pd", "gender": "F", "level": 4, "position": "Musyrifah"},
+  {"name": "Nurul Abidah", "gender": "F", "level": 4, "position": "Musyrifah"},
+  {"name": "Dayana Hasan", "gender": "F", "level": 4, "position": "Musyrifah"},
+  {"name": "Intan Alya", "gender": "F", "level": 4, "position": "Musyrifah"},
+  {"name": "Siti Mufarohah S.Pd", "gender": "F", "level": 4, "position": "Diniyah"},
+  {"name": "Siti Masrohatin S.Pd.I.", "gender": "F", "level": 4, "position": "Diniyah"},
+  {"name": "Maria Ulfah S.Pd", "gender": "F", "level": 4, "position": "Diniyah"},
+  {"name": "Umi Saifunnisak S.Pd", "gender": "F", "level": 4, "position": "Diniyah"}
+]
