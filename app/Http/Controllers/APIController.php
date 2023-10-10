@@ -6,6 +6,8 @@ use App\Helpers\ApiFormatter;
 use App\Models\Craft;
 use App\Models\Facility;
 use App\Models\Gallery;
+use App\Models\Instructor;
+use App\Models\Organization;
 use App\Models\Program;
 use App\Models\Post;
 use Illuminate\Http\Request;
@@ -20,6 +22,12 @@ class APIController extends Controller
   }
   public function gallery(Gallery $gallery){
     return ApiFormatter::createApi(200,"Success",$gallery);
+  }
+  public function instructor(Instructor $instructor){
+    return ApiFormatter::createApi(200,"Success",$instructor);
+  }
+  public function organization(Organization $organization){
+    return ApiFormatter::createApi(200,"Success",$organization);
   }
   public function program(Program $program){
     return ApiFormatter::createApi(200,"Success",$program);
