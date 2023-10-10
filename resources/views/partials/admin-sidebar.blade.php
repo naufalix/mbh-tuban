@@ -20,6 +20,11 @@
           </a>
         </li>
         <li class="sidebar-item">
+          <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/craft" aria-expanded="false">
+            <i class="mdi mdi-palette" style="font-size: 20px;"></i><span class="hide-menu">Karya</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
           <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/post" aria-expanded="false">
             <i class="fas fa-pencil-alt"></i><span class="hide-menu">Postingan</span>
           </a>
@@ -31,7 +36,7 @@
         </li>
         <li class="sidebar-item">
           <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
-            <i class="mdi mdi-receipt"></i><span class="hide-menu">Dropdpwn </span>
+            <i class="mdi mdi-chevron-down"></i><span class="hide-menu">Dropdpwn </span>
           </a>
           <ul aria-expanded="false" class="collapse  first-level">
             <li class="sidebar-item">

@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Craft;
 use App\Models\Post;
 use App\Models\User;
 use File;
@@ -32,5 +33,9 @@ class DatabaseSeeder extends Seeder
                 "image" => $value->image,
             ]);
         }
+
+        Craft::create(["name" => "Kaligrafi Kelas 8",   "image" => "1.png",]);
+        Craft::create(["name" => "Lukisan Kelas 9",     "image" => "2.png",]);
+        Craft::create(["name" => "Sulam Kelas 7",       "image" => "3.png",]);
     }
 }

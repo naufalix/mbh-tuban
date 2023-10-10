@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Helpers\ApiFormatter;
+use App\Models\Craft;
 use App\Models\Facility;
 use App\Models\Gallery;
 use App\Models\Program;
@@ -11,6 +12,9 @@ use Illuminate\Http\Request;
 
 class APIController extends Controller
 {
+  public function craft(Craft $craft){
+    return ApiFormatter::createApi(200,"Success",$craft);
+  }
   public function facility(Facility $facility){
     return ApiFormatter::createApi(200,"Success",$facility);
   }
