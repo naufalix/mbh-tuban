@@ -43,7 +43,7 @@ class AdminCraft extends Controller
         if($request->file('image')){
                 
             // Upload new image
-            $validatedData['image'] = time().".png";
+            $validatedData['image'] = time().".jpg";
             $request->file('image')->move(public_path('assets/images/craft'), $validatedData['image']);
             
             // Create craft
@@ -75,7 +75,7 @@ class AdminCraft extends Controller
                 unlink($image_path);
                 
                 // Upload new image
-                $validatedData['image'] = time().".png";
+                $validatedData['image'] = time().".jpg";
                 $request->file('image')->move(public_path('assets/images/craft'), $validatedData['image']);
                 
                 $craft->update($validatedData);

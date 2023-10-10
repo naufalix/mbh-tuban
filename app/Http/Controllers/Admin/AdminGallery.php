@@ -42,7 +42,7 @@ class AdminGallery extends Controller
         if($request->file('image')){
                 
             // Upload new image
-            $validatedData['image'] = time().".png";
+            $validatedData['image'] = time().".jpg";
             $request->file('image')->move(public_path('assets/images/gallery'), $validatedData['image']);
             
             // Create gallery
@@ -74,7 +74,7 @@ class AdminGallery extends Controller
                 unlink($image_path);
                 
                 // Upload new image
-                $validatedData['image'] = time().".png";
+                $validatedData['image'] = time().".jpg";
                 $request->file('image')->move(public_path('assets/images/gallery'), $validatedData['image']);
                 
                 $gallery->update($validatedData);

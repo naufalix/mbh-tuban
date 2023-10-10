@@ -42,7 +42,7 @@ class AdminFacility extends Controller
         if($request->file('image')){
                 
             // Upload new image
-            $validatedData['image'] = time().".png";
+            $validatedData['image'] = time().".jpg";
             $request->file('image')->move(public_path('assets/images/facility'), $validatedData['image']);
             
             // Create facility
@@ -74,7 +74,7 @@ class AdminFacility extends Controller
                     unlink($image_path);
                     
                     // Upload new image
-                    $validatedData['image'] = time().".png";
+                    $validatedData['image'] = time().".jpg";
                     $request->file('image')->move(public_path('assets/images/facility'), $validatedData['image']);
                     
                     $facility->update($validatedData);

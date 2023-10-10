@@ -51,7 +51,7 @@ class AdminPost extends Controller
             ]);
 
             // Upload new image
-            $validatedData['image'] = time().".png";
+            $validatedData['image'] = time().".jpg";
             $request->file('image')->move(public_path('assets/images/post'), $validatedData['image']);
             
             if(!Post::whereSlug($request->slug)->first()){
@@ -108,7 +108,7 @@ class AdminPost extends Controller
                         unlink($image_path);
                         
                         // Upload new image
-                        $validatedData['image'] = time().".png";
+                        $validatedData['image'] = time().".jpg";
                         $request->file('image')->move(public_path('assets/images/post'), $validatedData['image']);
                         
                         $post->update($validatedData);
@@ -140,7 +140,7 @@ class AdminPost extends Controller
                     unlink($image_path);
                     
                     // Upload new image
-                    $validatedData['image'] = time().".png";
+                    $validatedData['image'] = time().".jpg";
                     $request->file('image')->move(public_path('assets/images/post'), $validatedData['image']);
                     
                     $post->update($validatedData);
