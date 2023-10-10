@@ -33,7 +33,7 @@
       <div class="page-wrapper">
         @yield('content')
         <footer class="footer text-center">
-          All Rights Reserved by Matrix-admin. Designed and Developed by <a href="https://wrappixel.com">WrapPixel</a>.
+          Template by <a href="https://wrappixel.com">WrapPixel</a>. Developed by <a href="https://naufal.dev">naufal.dev</a>.
         </footer>
       </div>
     </div>
