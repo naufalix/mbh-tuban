@@ -2,7 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
-use App\Models\User;
+use App\Models\Craft;
+use App\Models\Facility;
+use App\Models\Gallery;
+use App\Models\Instructor;
+use App\Models\Organization;
+use App\Models\Program;
+use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -11,8 +17,14 @@ class AdminDashboard extends Controller
     
     public function index(){
         return view('admin.dashboard',[
-            "title" => "Admin Dashboard",
-            "users" => User::all(),
+            "title" => "Admin | Dashboard",
+            "crafts" => Craft::all(),
+            "facilities" => Facility::all(),
+            "galleries" => Gallery::all(),
+            "instructors" => Instructor::all(),
+            "organizations" => Organization::all(),
+            "programs" => Program::all(),
+            "posts" => Post::all(),
         ]);
     }
 
