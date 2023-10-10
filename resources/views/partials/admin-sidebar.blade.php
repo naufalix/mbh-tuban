@@ -35,6 +35,11 @@
           </a>
         </li>
         <li class="sidebar-item">
+          <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/instructor" aria-expanded="false">
+            <i class="mdi mdi-school" style="font-size: 20px;"></i><span class="hide-menu">Tenaga pengajar</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
           <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/organization" aria-expanded="false">
             <i class="mdi mdi-account-group" style="font-size: 20px;"></i><span class="hide-menu">Struktur organisasi</span>
           </a>
