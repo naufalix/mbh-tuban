@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\APIController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Admin\AdminCraft;
 use App\Http\Controllers\Admin\AdminDashboard;
@@ -13,9 +14,11 @@ use App\Http\Controllers\Admin\AdminPost;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'home']);
+Route::get('/blog', [HomeController::class, 'blog']);
+Route::get('/galeri', [HomeController::class, 'gallery']);
+Route::get('/post/{post:slug}', [HomeController::class, 'post']);
+
 
 // ADMIN AUTH
 Route::get('/admin/login', [AuthController::class, 'index'])->name('login');
