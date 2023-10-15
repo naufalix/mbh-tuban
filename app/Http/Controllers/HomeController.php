@@ -24,14 +24,14 @@ class HomeController extends Controller
             "instructors" => Instructor::all(),
             "organizations" => Organization::all(),
             "programs" => Program::all(),
-            "posts" => Post::limit(3)->get(),
+            "posts" => Post::limit(3)->orderBy("id","DESC")->get(),
         ]);
     }
 
     public function blog(){
         return view('blog',[
             "title" => "Ma'had Bahrul Huda | Blog",
-            "posts" => Post::all(),
+            "posts" => Post::orderBy("id","DESC")->get(),
         ]);
     }
 
@@ -42,11 +42,25 @@ class HomeController extends Controller
         ]);
     }
 
+    public function instructor(){
+        return view('instructor',[
+            "title" => "Ma'had Bahrul Huda | Tenaga Pendidik",
+            "instructors" => Instructor::orderBy("level","ASC")->get(),
+        ]);
+    }
+
+    public function organization(){
+        return view('organization',[
+            "title" => "Ma'had Bahrul Huda | Struktur Organisasi",
+            "organizations" => Organization::all(),
+        ]);
+    }
+
     public function post(Post $post){
         return view('post',[
             "title" => "Ma'had Bahrul Huda | ".$post->title,
             "post" => $post,
-            "posts" => Post::limit(3)->get(),
+            "posts" => Post::limit(3)->orderBy("id","DESC")->get(),
         ]);
     }
 

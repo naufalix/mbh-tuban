@@ -24,7 +24,7 @@
           <article class="blog-details">
 
             <div class="post-img">
-              <img src="assets/images/post/{{$post->image}}" alt="" class="img-fluid">
+              <img src="/assets/images/post/{{$post->image}}" alt="" class="img-fluid" style="width: 100%;">
             </div>
 
             <h2 class="title">{{$post->title}}</h2>

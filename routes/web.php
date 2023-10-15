@@ -13,12 +13,13 @@ use App\Http\Controllers\Admin\AdminProgram;
 use App\Http\Controllers\Admin\AdminPost;
 use Illuminate\Support\Facades\Route;
 
-
+// HOMEPAGE
 Route::get('/', [HomeController::class, 'home']);
 Route::get('/blog', [HomeController::class, 'blog']);
 Route::get('/galeri', [HomeController::class, 'gallery']);
 Route::get('/post/{post:slug}', [HomeController::class, 'post']);
-
+Route::get('/tenaga-pendidik', [HomeController::class, 'instructor']);
+Route::get('/struktur-organisasi', [HomeController::class, 'organization']);
 
 // ADMIN AUTH
 Route::get('/admin/login', [AuthController::class, 'index'])->name('login');
